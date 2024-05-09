@@ -1,0 +1,197 @@
+
+body{
+  font-family: Raleway, sans-serif;
+}
+.main-container {
+  background-color: #4DBFD9;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.weather-container {
+  background-color: #FAFAFA;
+  height: 630px;
+  width: 1065px;
+}
+
+.weatherInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.search-location {
+  width: 260px;
+  height: 45px;
+  background-color: #ffffff;
+  margin: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-self: center;
+  border: 1px solid black;
+}
+
+.location {
+  color: #FAFAFA;
+  justify-content: center;
+}
+
+input[name="location"] {
+  color: slategrey;
+  background: none;
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  caret-color: transparent;
+}
+
+input[name="location"]:focus{
+  outline: none;
+  border: none;
+}
+
+
+button.search {
+  border-left: 2px solid slategrey;
+  background: none;
+  border-radius: 0px;
+  margin-top: 2px;
+  color: slategrey;
+}
+
+button.search:hover,
+button.search:focus {
+  border-left:2px solid slategrey; ;
+  border-right: 1px solid transparent;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent; /* Hide the border on hover and focus */
+  outline: none; /* Remove the outline on hover and focus */
+}
+
+h2 {
+  color: black;
+  align-self: center;
+  text-align: center;
+}
+.primaryText{
+  color: slategrey;
+}
+
+.secondaryText{
+  color: #000;
+}
+.todays-weather {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.todays-weather-image {
+  height: 160px;
+  width: 260px;
+}
+
+.temp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Temp {
+  font-size: 120px;
+  color: black;
+  margin-bottom: 0px;
+}
+
+.Temp2 {
+  font-size: 20px;
+  color: slategrey;
+}
+
+.otherInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  margin-top: 40px;
+}
+
+.otherInfo span {
+  padding-bottom: 20px;
+  height: 30px;
+  color: slategrey;
+}
+
+
+.future-weather {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 70px ;
+  gap: 0px;
+}
+
+.future-weather-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.future-temp {
+  color: slategrey;
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+}
+
+.day {
+  color: slategrey;
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+}
+
+.weather-type{
+  color: slategrey;
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+}
+
+.toggle{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.toggle h3 {
+  margin: 0 5px;
+  color: #000; /* Default color */
+  cursor: pointer;
+}
+
+.toggle h3.active {
+  color: #666; /* Active color */
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #333;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+
