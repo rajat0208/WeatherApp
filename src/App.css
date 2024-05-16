@@ -1,6 +1,6 @@
 
 body{
-  font-family: Raleway, sans-serif;
+  font-family: Poppins, Raleway, sans-serif;
 }
 .main-container {
   background-color: #4DBFD9;
@@ -12,7 +12,9 @@ body{
 .weather-container {
   background-color: #FAFAFA;
   height: 630px;
-  width: 1065px;
+  width: 100%;
+  max-width: 1065px;
+  margin: 0 auto;
 }
 
 .weatherInfo {
@@ -57,7 +59,6 @@ button.search {
   border-left: 2px solid slategrey;
   background: none;
   border-radius: 0px;
-  margin-top: 2px;
   color: slategrey;
 }
 
@@ -194,4 +195,51 @@ h2 {
   }
 }
 
+/* Styles for smaller screens */
+@media screen and (max-width: 990px) {
+  .weather-container {
+    height: auto; 
+    padding: 20px; 
+  }
+  
+  .todays-weather {
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px; 
+  }
 
+  .todays-weather-image {
+    max-width: 100%; 
+    height: auto;
+  }
+
+  .Temp {
+    font-size: 60px; 
+  }
+
+  .Temp2 {
+    font-size: 15px; 
+  }
+
+  .future-weather {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+  }
+
+  .future-weather-item {
+    justify-content: center; 
+    gap: 5px; 
+  }
+
+  .day,
+  .future-temp,
+  .weather-type {
+    padding: 0; 
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .weather-container {
+    width: 80%; 
+  }
+}
